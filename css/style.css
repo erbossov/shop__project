@@ -116,7 +116,7 @@ body {
 }
 
 .body__items-search__block .search__title {
-  font-family: 'Gupter';
+  font-family: "Gupter";
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -135,13 +135,13 @@ body {
   border: none;
   padding: 10px 0 10px 93px;
 
-  font-family: 'Gupter';
+  font-family: "Gupter";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
 
-  background: #F0F0F0 url(../img/search.svg) no-repeat 35px 19px / 22px;
+  background: #f0f0f0 url(../img/search.svg) no-repeat 35px 19px / 22px;
   /* background-color: #F0F0F0;
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
@@ -150,7 +150,7 @@ body {
 }
 
 .body__items-search__block .search__input::placeholder {
-  font-family: 'Gupter';
+  font-family: "Gupter";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -195,10 +195,17 @@ body {
 .pagination__dot {
   width: 7px;
   height: 7px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 50%;
 }
 
 .activeSlide {
   background-color: black;
+}
+.item {
+  height: 100px;
+  width: 100px;
+}
+.header-block_title {
+  cursor: pointer;
 }
