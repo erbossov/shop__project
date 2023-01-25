@@ -22,6 +22,25 @@ window.onload = () => {
   const data = fetch("https://fakestoreapi.com/products").then((res) =>
     res.json()
   );
+  const searchInput = document.getElementsByClassName("search__input")[0];
+  const hiddenDropdown = document.getElementsByClassName("search__dropdown")[0];
+  const dropdownTexts = document.getElementsByClassName(
+    "search__dropdown__text"
+  );
+
+  searchInput.addEventListener("focus", () => {
+    // hiddenDropdown.classList.toggle("hidden");
+    if (hiddenDropdown.classList.contains("hidden")) {
+      hiddenDropdown.classList.remove("hidden");
+    }
+  });
+
+  for (const text of dropdownTexts) {
+    text.addEventListener("click", () => {
+      searchTitle.innerText = `All items for category ${text.innerText}`;
+      hiddenDropdown.classList.add("hidden");
+    });
+  }
 
   // Route handling
   for (const header of headerTexts) {

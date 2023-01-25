@@ -158,7 +158,6 @@ body {
   /* identical to box height */
 
   letter-spacing: 0.035em;
-
   color: #808080;
 }
 
@@ -208,4 +207,33 @@ body {
 }
 .header-block_title {
   cursor: pointer;
+}
+
+.search__block {
+  position: relative;
+}
+
+.search__dropdown {
+  position: absolute;
+  background-color: #d9d9d9;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.search__dropdown__text {
+  padding: 15px 0 15px 30px;
+  margin: 0;
+  font-family: "Gupter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+}
+.search__dropdown__text:hover {
+  background-color: #274071;
 }
