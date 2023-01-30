@@ -23,6 +23,29 @@ window.onload = () => {
     "search__dropdown__text"
   );
 
+  //Toggle logic
+  const burgerIcon = document.getElementsByClassName("tablet_burger")[0];
+  const opacityBurger = document.getElementsByClassName(
+    "opacity__background"
+  )[0];
+  const burgerBlock = document.getElementsByClassName("burger__block")[0];
+  const burgerModalBlock = document.getElementsByClassName("burger__modal")[0];
+
+  burgerIcon.addEventListener("click", () => {
+    burgerModalBlock.style.display = "block";
+    setTimeout(() => {
+      opacityBurger.classList.add("toggle__background");
+      burgerBlock.classList.add("toggle__burger");
+    }, 100);
+  });
+  opacityBurger.addEventListener("click", () => {
+    opacityBurger.classList.remove("toggle__background");
+    burgerBlock.classList.remove("toggle__burger");
+    setTimeout(() => {
+      burgerModalBlock.style.display = "none";
+    }, 100);
+  });
+
   searchInput.addEventListener("focus", () => {
     if (hiddenDropdown.classList.contains("hidden")) {
       hiddenDropdown.classList.remove("hidden");
